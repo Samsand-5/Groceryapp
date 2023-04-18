@@ -62,5 +62,28 @@
                 android:id="@+id/idTVDelete"/>
 
         </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Cost"
+            android:layout_toLeftOf="@id/idTVTotalAmt"
+            android:layout_below="@id/idLL1"
+            android:textColor="@color/white"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:id="@+id/idTVHeading"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVTotalAmt"
+            android:layout_below="@id/idLL1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:text="Amt"
+            android:textColor="@color/white"
+            />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
