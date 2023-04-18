@@ -1,7 +1,7 @@
 package com.example.groceryapp.Database
 
 //The repository is one of the design structures.
-// The repository class gives the data to the ViewModel class and then the ViewModel class uses that data for Views.
+// The repository class gives the data to the ViewModal class and then the ViewModal class uses that data for Views.
 // The repository will choose the appropriate data locally or on the network.
 // Here in our Grocery Repository class data fetch locally from the Room database.
 // We will add constructor value by creating an instance of the database and stored in the db variable
