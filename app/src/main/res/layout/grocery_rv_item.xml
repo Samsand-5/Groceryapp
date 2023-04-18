@@ -59,7 +59,7 @@
                 android:layout_margin="3dp"
                 android:src="@drawable/ic_delete"
                 app:tint="@color/white"
-                android:id="@+id/idTVDelete"/>
+                android:id="@+id/idIVDelete"/>
 
         </LinearLayout>
         <TextView
