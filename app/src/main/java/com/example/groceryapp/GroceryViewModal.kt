@@ -13,5 +13,5 @@ class GroceryViewModal(private val repository: GroceryRepository): ViewModel()  
     fun delete(items: GroceryItems) = GlobalScope.launch {
         repository.delete(items)
     }
-    fun allGroceryItems() = repository.getAllItems()
+    fun getAllGroceryItems() = repository.getAllItems()
 }
