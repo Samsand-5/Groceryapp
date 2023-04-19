@@ -1,5 +1,6 @@
 package com.example.groceryapp
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -17,7 +18,7 @@ class GroceryRVAdapter(
         val quantityTV=itemView.findViewById<TextView>(R.id.idTVQuantity)
         val rateTV=itemView.findViewById<TextView>(R.id.idTVRate)
         val amountTV=itemView.findViewById<TextView>(R.id.idTVTotalAmt)
-        val deleteTV=itemView.findViewById<TextView>(R.id.idIVDelete)
+        val deleteIV=itemView.findViewById<TextView>(R.id.idIVDelete)
 
     }
 
@@ -28,7 +29,8 @@ class GroceryRVAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroceryViewHolder {
-        TODO("Not yet implemented")
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.grocery_rv_item,parent,false)
+        return GroceryViewHolder(view)
     }
 
     override fun getItemCount(): Int {
@@ -36,6 +38,13 @@ class GroceryRVAdapter(
     }
 
     override fun onBindViewHolder(holder: GroceryViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.nameTV.text = list.get(position).itemName
+        holder.quantityTV.text = list.get(position).itemQuantity.toString()
+        holder.rateTV.text = "Rs. "+list.get(position).itemPrice.toString()
+        val itemTotal : Int = list.get(position).itemPrice * list.get(position).itemQuantity
+        holder.amountTV.text = "Rs. "+itemTotal.toString()
+        holder.deleteIV.setOnClickListener{
+
+        }
     }
 }
