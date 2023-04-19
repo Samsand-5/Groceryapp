@@ -24,7 +24,6 @@ class GroceryRVAdapter(
 
     interface GroceryItemClickInterface{
         fun onItemClick(groceryItems: GroceryItems){
-
         }
     }
 
@@ -34,7 +33,7 @@ class GroceryRVAdapter(
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return list.size
     }
 
     override fun onBindViewHolder(holder: GroceryViewHolder, position: Int) {
@@ -44,7 +43,7 @@ class GroceryRVAdapter(
         val itemTotal : Int = list.get(position).itemPrice * list.get(position).itemQuantity
         holder.amountTV.text = "Rs. "+itemTotal.toString()
         holder.deleteIV.setOnClickListener{
-
+            groceryItemClickInterface.onItemClick(list.get(position))
         }
     }
 }
