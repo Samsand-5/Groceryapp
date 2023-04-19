@@ -102,6 +102,7 @@
                 android:layout_margin="8dp"
                 android:id="@+id/idBtnCancel"
                 android:text="Cancel"
+                android:background="@drawable/custom_button_back"
                 android:textAllCaps="false"/>
 
         </LinearLayout>
