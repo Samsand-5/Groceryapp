@@ -94,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_margin="5dp"
             android:weightSum="2">
             <Button
                 android:layout_width="0dp"
@@ -102,6 +103,16 @@
                 android:layout_margin="8dp"
                 android:id="@+id/idBtnCancel"
                 android:text="Cancel"
+                android:background="@drawable/custom_button_back"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:id="@+id/idBtnAdd"
+                android:text="Add"
                 android:background="@drawable/custom_button_back"
                 android:textAllCaps="false"/>
 
