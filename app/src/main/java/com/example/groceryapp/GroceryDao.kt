@@ -8,12 +8,12 @@ interface GroceryDao {
     // Insert function is used to
     // insert data in database.
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(item: GroceryItems)
+    suspend fun insert(item: GroceryItems): Long
 
     // Delete function is used to
     // delete data in database.
     @Delete
-    suspend fun delete(item: GroceryItems)
+    suspend fun delete(item: GroceryItems): Long
 
     // getAllGroceryItems function is used to get
     // all the data of database.
